@@ -5,7 +5,7 @@ export default async function handler(req, res) {
   if (req.method === 'OPTIONS') return res.status(200).end();
   if (req.method !== 'POST') return res.status(405).end();
   const { system, user } = req.body;
-  const key = process.env.ANTHROPIC_KEY;
+  const key = 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;
   if (!key) return res.status(500).json({ error: { message: 'ANTHROPIC_KEY غير مضبوط في Vercel' } });
   try {
     const r = await fetch('https://api.anthropic.com/v1/messages', {
